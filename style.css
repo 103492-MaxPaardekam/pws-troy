@@ -23,6 +23,8 @@ h3 {
 
 /* Header en Navigatie */
 header {
+  position: sticky;
+  top: 0;
   background-color: #1a1a40;
   color: white;
   padding: 1rem 0;
