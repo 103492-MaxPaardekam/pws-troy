@@ -217,10 +217,11 @@ header nav a:hover {
   padding-bottom: 20px;
   margin-bottom: 40px;
   border-bottom: 3px solid #181818; /* Accentlijn onder de hoofdtitel */
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .research-section {
+  color: black;
   background-color: white;
   padding: 30px;
   margin-bottom: 30px;
@@ -229,9 +230,9 @@ header nav a:hover {
 }
 
 .research-section h3 {
-  color: #1a1a40;
+  color: #181818;
   font-size: 1.8rem;
-  border-left: 5px solid #1a1a40; /* Donkerblauwe accentbalk */
+  border-left: 5px solid #181818; /* Donkerblauwe accentbalk */
   padding-left: 15px;
   margin-top: 0;
 }
@@ -321,7 +322,7 @@ header nav a:hover {
 .conclusion-points li {
   padding: 8px 0;
   font-weight: 600;
-  color: #1a1a40;
+  color: #181818;
 }
 
 .key-finding-box {
@@ -342,6 +343,7 @@ header nav a:hover {
 
 .resource-group {
   background-color: white;
+  color: black;
   padding: 30px;
   margin-bottom: 40px;
   border-radius: 8px;
@@ -351,7 +353,7 @@ header nav a:hover {
 .resource-group h3 {
   border-bottom: 2px solid #e6e6fa; /* Lichte scheiding */
   padding-bottom: 10px;
-  color: #1a1a40;
+  color: #181818;
   font-size: 1.5rem;
 }
 
@@ -385,7 +387,7 @@ header nav a:hover {
 
 .resource-link:hover {
   text-decoration: underline;
-  color: #1a1a40;
+  color: #111111;
 }
 
 .supplement-note {
@@ -458,5 +460,78 @@ footer {
   }
   100% {
     transform: translateX(25%);
+  }
+}
+
+/* Survey Results Grid */
+.survey-results {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 2px solid #e6e6fa;
+}
+
+.survey-results h5 {
+  color: #181818;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid #1a1a40;
+  padding-bottom: 10px;
+}
+
+.survey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.survey-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.survey-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.survey-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.survey-caption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Make the last item span full width if there's an odd number */
+.survey-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive design for survey grid */
+@media (max-width: 900px) {
+  .survey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .survey-item:last-child:nth-child(odd) {
+    grid-column: 1;
+    max-width: 100%;
   }
 }
