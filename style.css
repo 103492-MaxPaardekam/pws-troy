@@ -1,0 +1,427 @@
+/* Algemene Reset en Typografie */
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Donkere tekst voor leesbaarheid */
+  background-color: #f4f4f9; /* Zeer lichtgrijze achtergrond */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  color: #1a1a40; /* Donker, professioneel blauw voor koppen */
+}
+
+/* Header en Navigatie */
+header {
+  background-color: #1a1a40;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+  display: inline-block;
+}
+
+header nav {
+  float: right;
+  padding-top: 5px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ffd700; /* Goud-geel accentkleur bij hover */
+}
+
+/* Hero Sectie (Eerste Indruk) */
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("gym-background.jpg") center/cover;
+  /* Vervang 'gym-background.jpg' door een eigen, relevante afbeelding. */
+  color: white;
+  text-align: center;
+  padding: 150px 0;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Content Secties */
+.content-section {
+  padding: 60px 0;
+}
+
+#abstract {
+  background-color: white;
+}
+
+/* Styling voor de Over Ons (Team) Sectie */
+
+.team-grid {
+  display: flex;
+  gap: 30px; /* Ruimte tussen de kaarten */
+  margin-top: 40px;
+  flex-wrap: wrap; /* Zorgt ervoor dat ze op mobiel onder elkaar vallen */
+  justify-content: center;
+}
+
+.team-member-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Zorgt voor gelijke breedte */
+  min-width: 250px; /* Minimale breedte om leesbaar te blijven */
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.team-member-card:hover {
+  transform: translateY(-5px); /* Klein zweef-effect bij hover */
+}
+
+.team-member-card h3 {
+  color: #1a1a40;
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-left: none; /* Overschrijft eerdere border-left regels */
+}
+
+.team-member-card .role {
+  display: block;
+  color: #ffd700;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.team-member-card p {
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.team-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.contact-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px dashed #ccc;
+}
+
+/* Responsiviteit voor de team grid op kleinere schermen */
+@media (max-width: 900px) {
+  .team-grid {
+    flex-direction: column;
+  }
+  .team-member-card {
+    min-width: 100%;
+  }
+}
+
+/* Call-to-Action Knoppen */
+.cta-button {
+  display: inline-block;
+  background-color: #ffd700;
+  color: #1a1a40;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  background-color: #ffc400;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: #ccc;
+  color: #333;
+}
+
+.cta-button.secondary:hover {
+  background-color: #bbb;
+}
+
+/* Key Takeaways (Lijst in Abstract) */
+.key-takeaways {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #e6e6fa; /* Zacht lavendel/lichtpaars als accent */
+  border-left: 5px solid #1a1a40;
+  border-radius: 5px;
+}
+
+.key-takeaways h3 {
+  margin-top: 0;
+}
+
+.key-takeaways ul {
+  list-style: none;
+  padding: 0;
+}
+
+.key-takeaways li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #c0c0e0;
+}
+
+.key-takeaways li:last-child {
+  border-bottom: none;
+}
+
+/* Styling voor de onderzoekspagina (onderzoek.html) */
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #ffd700; /* Accentlijn onder de hoofdtitel */
+}
+
+.research-section {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.research-section h3 {
+  color: #1a1a40;
+  font-size: 1.8rem;
+  border-left: 5px solid #1a1a40; /* Donkerblauwe accentbalk */
+  padding-left: 15px;
+  margin-top: 0;
+}
+
+.research-section h4 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-top: 30px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+/* Lijsten binnen het onderzoek */
+.research-section ul,
+.research-section ol {
+  padding-left: 20px;
+}
+
+.research-section li {
+  margin-bottom: 10px;
+}
+
+/* Plaatsaanduiding voor nog in te vullen tekst */
+.placeholder {
+  font-style: italic;
+  color: #888;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.supplement-list ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+.supplement-list li {
+  background-color: #f7f7f7;
+  border-left: 4px solid #ffd700;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.results-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.interview-quote {
+  font-style: italic;
+  border-left: 5px solid #e6e6fa;
+  padding: 15px 20px;
+  background-color: #fafafa;
+  margin: 20px 0;
+}
+.interview-quote footer {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+.data-note {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* CSS voor de opsomming van symptomen */
+.symptoms-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.symptoms-list li {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background-color: #ffe0e0; /* Zachte rode tint voor risico's/klachten */
+  border-left: 4px solid #cc0000;
+  border-radius: 4px;
+}
+
+/* CSS voor de Conclusie en Aanbevelingen, toe te voegen aan style.css */
+.conclusion-points {
+  list-style-type: none;
+  padding-left: 0;
+}
+.conclusion-points li {
+  padding: 8px 0;
+  font-weight: 600;
+  color: #1a1a40;
+}
+
+.key-finding-box {
+  margin: 30px 0;
+  padding: 20px;
+  border: 2px solid #ffd700;
+  background-color: #fffae6;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.recommendation-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Styling voor de Bronnenpagina (bronnen.html) */
+
+.resource-group {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.resource-group h3 {
+  border-bottom: 2px solid #e6e6fa; /* Lichte scheiding */
+  padding-bottom: 10px;
+  color: #1a1a40;
+  font-size: 1.5rem;
+}
+
+.citation-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.citation-list li {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+}
+
+.citation-list li:last-child {
+  border-bottom: none;
+}
+
+.citation-list strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.resource-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: #007bff; /* Standaard link kleur */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.resource-link:hover {
+  text-decoration: underline;
+  color: #1a1a40;
+}
+
+.supplement-note {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsiviteit */
+@media (max-width: 768px) {
+  header h1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    float: none;
+    text-align: center;
+  }
+
+  header nav a {
+    margin: 0 10px;
+  }
+
+  #hero {
+    padding: 80px 0;
+  }
+}
